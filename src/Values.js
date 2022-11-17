@@ -1,12 +1,14 @@
-function createEnum() {
-    const enumObject = {};
+function createValues() {
+    const valuesObject = {};
     for (let i = 0; i < 9; i++) {
-        enumObject[i] = i.toString();
+        valuesObject[i] = i.toString();
     }
-    return Object.freeze(enumObject);
+    valuesObject["Bomb"] = "bomb";
+    return Object.freeze(valuesObject);
 }
 
-module.exports = createEnum();
+module.exports = createValues();
+
 /* const Values = Object.freeze({
     0: Symbol("0"),
     1: Symbol("1"),
@@ -17,5 +19,5 @@ module.exports = createEnum();
     6: Symbol("6"),
     7: Symbol("7"),
     8: Symbol("8"),
-    Bomba: Symbol("bomba"),
+    Bomb: Symbol("bomb"),
 }); */
